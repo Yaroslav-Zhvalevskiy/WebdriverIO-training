@@ -6,11 +6,9 @@ class BaseObject {
 
     clickBy(elements, textOrPosition) {
         if (typeof textOrPosition === 'number') {
-            this[elements][textOrPosition].click();
+            this.clickByPos(elements, textOrPosition);
         } else {
-            this[elements].find((el) => {
-                return el.getText().trim() === textOrPosition;
-            }).click();
+            this.clickByText(elements, textOrPosition);
         }
     }
 
