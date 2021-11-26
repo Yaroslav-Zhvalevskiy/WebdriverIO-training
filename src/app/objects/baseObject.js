@@ -13,6 +13,20 @@ class BaseObject {
             }).click();
         }
     }
+
+    clickByText(elements, text) {
+        this[elements].find((el) => {
+            return el.getText() === text;
+        }).click();
+    }
+
+    clickByPos(elements, position) {
+        this[elements][position].click();
+    }
+
+    scrollDown(element) {
+        this[element].scrollIntoView();
+    }
 }
 
 module.exports = BaseObject;

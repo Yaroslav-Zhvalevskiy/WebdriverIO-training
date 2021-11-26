@@ -1,4 +1,4 @@
-const BaseObject = require("../baseObject");
+const BaseObject = require('../baseObject');
 
 class Header extends BaseObject {
     constructor() {
